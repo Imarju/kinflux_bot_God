@@ -1,8 +1,8 @@
-//GURU-BOT
+//ARJU-BOT
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text }) => {
-  if (!text) throw 'Please provide a phone number.';
+  if (!text) throw 'arey bhai mujhe koi number provide karo🙄.';
 
   try {
     let res = await fetch(`https://inrl-web.onrender.com/api/truecaller?number=${text}`);
@@ -21,7 +21,7 @@ let handler = async (m, { conn, text }) => {
     let data = json.data[0];
 
     // Add custom property.
-    data.creator = 'GURU';
+    data.creator = 'ARJU';
 
     let response = '';
 
@@ -59,12 +59,12 @@ let handler = async (m, { conn, text }) => {
     }
 
     // Add 'creator' property to the response
-    response += `𝗖𝗥𝗘𝗔𝗧𝗢𝗥: ${data.creator}\n`;
+    response += `𝗖𝗥𝗘𝗔𝗧𝗢𝗥: *ARJU-SONWANI*`;
 
     m.reply(response);
   } catch (error) {
     console.error(error);
-    m.reply('An error occurred while processing your request. Please try again.');
+    m.reply('SORRY bidu mujhe maaf kar do main kisi ka information reveal nhi kar sakta 😥😥 ye unke privacy ke against ho jayega ⚠️ tum badme try kar lena 😅');
   }
 };
 
