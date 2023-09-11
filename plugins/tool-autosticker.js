@@ -11,7 +11,7 @@ let user = db.data.users[m.sender]
 if (chat.autosticker && m.isGroup) {
 let q = m
 let stiker = false
-let wm = 'AsliGuru'
+let wm = 'Arju-manikpuri'
 let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/webp/g.test(mime)) return
 if (/image/g.test(mime)) {
@@ -30,7 +30,7 @@ if (isUrl(m.text)) stiker = await createSticker(false, args[0], '', author, 20)
 else return
 }
 if (stiker) {
-let img = await(await fetch('https://raw.githubusercontent.com/Guru322/api/Guru/guru.jpg')).buffer()  
+let img = await(await fetch('')).buffer()  
 await this.sendFile(m.chat, stiker, 'error.jpg', null, m, false, { contextInfo: { showAdAttribution: true }})    
 }}
 return !0
