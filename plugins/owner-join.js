@@ -1,7 +1,7 @@
 
 let handler = async (m, { conn, text, usedPrefix, command, args, participants, isOwner }) => {
 	
-   if (!isOwner) return conn.sendButton(m.chat, `*Invite bot to a group*\n\nHello @${m.sender.split('@')[0]}\nyou can rent the bot to join a group\n\n_more info click on the button_`.trim(), igfg, null, [
+   if (!isOwner) return conn.sendButton(m.chat, `*Invite bot to a group*\n\nHello @${m.sender.split('@')[0]}\nyou can rent the gmx bot to join a group\n\n_more info click on the button_`.trim(), igfg, null, [
        ['Alquilar', `${usedPrefix}buyprem`]] , m, { mentions: [m.sender] })
 	
   let time = global.db.data.users[m.sender].lastjoin + 86400000
@@ -10,12 +10,12 @@ let handler = async (m, { conn, text, usedPrefix, command, args, participants, i
  
   let name = m.sender 
   let [_, code] = text.match(linkRegex) || []
-  if (!args[0]) throw `✳️ Send the group link\n\n 📌 Example:\n *${usedPrefix + command}* <linkwa> <dias>\n\n_the number is the days the bot will be in the group_` 
+  if (!args[0]) throw `✳️ Send the group link\n\n 📌 Example:\n *${usedPrefix + command}* <linkwa> <dias>\n\n_the number is the days the gmx bot will be in the group_` 
   if (!code) throw `✳️ Link invalid`
   if (!args[1]) throw `📌 Missing number of days\n\n Example:\n *${usedPrefix + command}* <linkwa> 2`
-  if (isNaN(args[1])) throw `✳️ Number only, representing the days the bot will be in the group!`
+  if (isNaN(args[1])) throw `✳️ Number only, representing the days the gmx bot will be in the group!`
   let owbot = global.owner[1] 
-  m.reply(`😎 Wait 3 seconds, I will join the group`)
+  m.reply(`😎 Wait 3 seconds, gmx will join the group`)
   await delay(3000)
   try {
   let res = await conn.groupAcceptInvite(code)
@@ -27,26 +27,26 @@ let handler = async (m, { conn, text, usedPrefix, command, args, participants, i
   let now = new Date() * 1
   if (now < global.db.data.chats[res].expired) global.db.data.chats[res].expired += nDays
   else global.db.data.chats[res].expired = now + nDays
-  if (e.length) await m.reply(`✅ I successfully joined the group \n\n≡ group info \n\n *Name :* ${await conn.getName(res)}\n\nThe bot will exit automatically after \n\n${msToDate(global.db.data.chats[res].expired - now)}`)
+  if (e.length) await m.reply(`✅ gmx bot successfully joined the group \n\n≡ group info \n\n *Name :* ${await conn.getName(res)}\n\nThe bot will exit automatically after \n\n${msToDate(global.db.data.chats[res].expired - now)}`)
  
- if (e.length) await conn.reply(res, `🏮 hello guys
+ if (e.length) await conn.reply(res, `🤝 hello guys
 
-@${owbot} he is my creator if you have any doubt
+ arju sonwani is my creator if you have any doubt
 I was invited by *${m.name}*`, m, {
     mentions: d
      }).then(async () => {
      await delay(7000)
      }).then( async () => {
      await conn.reply(res, `ok everyone relax 🤭`, 0)
-     await conn.reply(global.owner[1]+'@s.whatsapp.net', `≡ *GROUP INVITATION*\n\n@${m.sender.split('@')[0]} ha invitado a *${conn.user.name}* al grupo\n\n*${await conn.getName(res)}*\n\n*ID* : ${res}\n\n📌 Link : ${args[0]}\n\nThe bot will exit automatically after \n\n${msToDate(global.db.data.chats[res].expired - now)}`, null, {mentions: [m.sender]})
+     await conn.reply(global.owner[1]+'@s.whatsapp.net', `≡ *GROUP INVITATION*\n\n@${m.sender.split('@')[0]} ha invitado a *${conn.user.name}* al grupo\n\n*${await conn.getName(res)}*\n\n*ID* : ${res}\n\n📌 Link : ${args[0]}\n\nThe gmx bot will exit automatically after \n\n${msToDate(global.db.data.chats[res].expired - now)}`, null, {mentions: [m.sender]})
      })
-     if (!e.length) await conn.reply(global.owner[1]+'@s.whatsapp.net', `≡ *INVITACIÓN A GRUPO*\n\n@${m.sender.split('@')[0]} has invited *${conn.user.name}* to group\n\n*${await conn.getName(res)}*\n\n*ID* : ${res}\n\n📌 link : ${args[0]}\n\nThe bot will exit automatically after\n\n ${msToDate(global.db.data.chats[res].expired - now)}`, null, {mentions: [m.sender]})
-     if (!e.length) await m.reply(`✳️ Successfully invite bot to group\n\n${await conn.getName(res)}\n\nThe bot will exit automatically after *${msToDate(global.db.data.chats[res].expired - now)}*`).then(async () => {
+     if (!e.length) await conn.reply(global.owner[1]+'@s.whatsapp.net', `≡ *INVITACIÓN A GRUPO*\n\n@${m.sender.split('@')[0]} has invited *${conn.user.name}* to group\n\n*${await conn.getName(res)}*\n\n*ID* : ${res}\n\n📌 link : ${args[0]}\n\nThe gmx bot will exit automatically after\n\n ${msToDate(global.db.data.chats[res].expired - now)}`, null, {mentions: [m.sender]})
+     if (!e.length) await m.reply(`✳️ Successfully invite gmx bot to group\n\n${await conn.getName(res)}\n\nThe gmx bot will exit automatically after *${msToDate(global.db.data.chats[res].expired - now)}*`).then(async () => {
      let mes = `Hii 👋🏻
      
 *${conn.user.name}* is one of the multi-device WhatsApp bots built with Node.js, *${conn.user.name}* just invited by *${m.name}*
 
-to see the menu of the bot write
+to see the menu of the gmx bot write
 
 ${usedPrefix}help
 @${conn.user.jid.split('@')[0]} will exit automatically after \n\n${msToDate(global.db.data.chats[res].expired - now)}`
@@ -56,7 +56,7 @@ ${usedPrefix}help
      })
     } catch (e) {
       conn.reply(global.owner[1]+'@s.whatsapp.net', e)
-      throw `✳️ Sorry, the bot  joined group`
+      throw `🤝 bruhh the gmx bot joined group`
       }
 }
 handler.help = ['join <chat.whatsapp.com> <dias>']
