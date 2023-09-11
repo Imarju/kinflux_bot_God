@@ -1,7 +1,7 @@
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 	
-   let tee = `✳️ Enter a short text\n\n📌 Example  : *${usedPrefix + command}* GURU`
-   let too = `✳️ Separate the text with a *+* \n\n📌 Example : \n*${usedPrefix + command}* GURU *+* BOT`
+   let tee = `✳️ Enter a short text\n\n📌 Example  : *${usedPrefix + command}* ARJU`
+   let too = `✳️ Separate the text with a *+* \n\n📌 Example : \n*${usedPrefix + command}* ARJU *+* BOT`
     m.react(rwait)
 let type = (command).toLowerCase()
 switch (type) {
@@ -28,7 +28,7 @@ switch (type) {
 	break 	
         case 'gfx4': 
    if (!text) throw tee
-   let gandu = global.API('fgmods', '/api/sadboy', { text: 'GURU', text2: text}, 'apikey')
+   let gandu = global.API('fgmods', '/api/sadboy', { text: 'ARJU', text2: text}, 'apikey')
 	conn.sendFile(m.chat, gandu, 'logo.png', `✅ Result`, m)
 	m.react(done)
 	break 
