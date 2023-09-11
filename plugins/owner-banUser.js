@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     let users = global.db.data.users
     users[who].banned = true
     conn.reply(m.chat, `
-✅ BANNED
+GMX BANNED U 
 
 ───────────
 @${who.split`@`[0]} you will no longer be able to use my commands `, m, { mentions: [who] })
