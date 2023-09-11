@@ -1,6 +1,6 @@
 
 import translate from '@vitalets/google-translate-api'
-const defaultLang = 'en'
+const defaultLang = 'hi'
 const tld = 'cn'
 
 let handler = async (m, { args, usedPrefix, command }) => {
@@ -8,7 +8,7 @@ let handler = async (m, { args, usedPrefix, command }) => {
 📌 *Example:*
 
 *${usedPrefix + command}* <id> [text]
-*${usedPrefix + command}* en Hello World
+*${usedPrefix + command}* hi Bolo GMX bot ki jai
 
 ≡ *List of supported languages:* 
 
