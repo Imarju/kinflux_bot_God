@@ -31,7 +31,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
   } catch (error) {
     console.error("Error:", error.message);
     console.error("Error response:", error.response);
-    conn.reply(m.chat, "An error occurred. Please try again later.", m);
+    conn.reply(m.chat, "sorry bruhh 😙 an error occurred. Please try again later.", m);
   }
 }
 
