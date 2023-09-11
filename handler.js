@@ -280,7 +280,7 @@ export async function handler(chatUpdate) {
                 if (!('welcome' in chat))
                     chat.welcome = true
                 if (!('detect' in chat))
-                    chat.detect = false
+                    chat.detect = true
                 if (!('sWelcome' in chat))
                     chat.sWelcome = ''
                 if (!('sBye' in chat))
@@ -292,11 +292,11 @@ export async function handler(chatUpdate) {
                 if (!('delete' in chat))
                     chat.delete = true
                 if (!('antiLink' in chat))
-                    chat.antiLink = false
+                    chat.antiLink = true
                 if (!('viewonce' in chat))
-                    chat.viewonce = false
+                    chat.viewonce = true
                 if (!('antiToxic' in chat))
-                    chat.antiToxic = false
+                    chat.antiToxic = true
                 if (!('simi' in chat))
                     chat.simi = false
                 if (!('autosticker' in chat))
@@ -315,18 +315,18 @@ export async function handler(chatUpdate) {
                 global.db.data.chats[m.chat] = {
                     isBanned: false,
                     welcome: true,
-                    detect: false,
+                    detect: true,
                     sWelcome: '',
                     sBye: '',
                     sPromote: '',
                     sDemote: '',
                     delete: true,
-                    antiLink: false,
-                    viewonce: false,
+                    antiLink: true,
+                    viewonce: true,
                     antiToxic: true,
                     simi: false,
                     expired: 0,
-                    onlyenglish: false,
+                    onlyenglish: true,
                     autosticker: false,
                     premium: false,
 	            premiumTime: false,
@@ -335,16 +335,16 @@ export async function handler(chatUpdate) {
             let settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
-                if (!('self' in settings)) settings.self = false
-                if (!('autoread' in settings)) settings.autoread = false
+                if (!('self' in settings)) settings.self = false 
+                if (!('autoread' in settings)) settings.autoread = true
                 if (!('restrict' in settings)) settings.restrict = false
                 if (!('anticall' in settings)) settings.anticall = true
-                if (!('autorestart' in settings)) settings.autorestart = false
+                if (!('autorestart' in settings)) settings.autorestart = true
                 if (!('restartDB' in settings)) settings.restartDB = 0
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
-                autoread: false,
-                autorestart: false,
+                autoread: true,
+                autorestart: true,
                 anticall: true,
                 restartDB: 0,
                 restrict: false
@@ -541,11 +541,11 @@ export async function handler(chatUpdate) {
                 else
                     m.exp += xp
                 if (!isPrems && plugin.diamond && global.db.data.users[m.sender].diamond < plugin.diamond * 1) {
-                     this.reply(m.chat, `✳️ your diamonds ran out \n use the following command to buy more diamonds \n*${usedPrefix}todiamond* <amount`, m)
+                     this.reply(m.chat, `🌝 your diamonds ran out \n use the following command to buy more diamonds \n*${usedPrefix}todiamond* <amount`, m)
                     continue // Limit habis
                 }
                 if (plugin.level > _user.level) {
-                    this.reply(m.chat, `✳️ required level ${plugin.level} to use this command. \nyour level ${_user.level}`, m)
+                    this.reply(m.chat, `🌝 required level ${plugin.level} to use this command. \nyour level ${_user.level}`, m)
                     continue // If the level has not been reached
                 }
                 let extra = {
@@ -601,7 +601,7 @@ export async function handler(chatUpdate) {
                         }
                     }
                     if (m.diamond)
-                        m.reply(`consumed *${+m.diamond}* 💎`)
+                        m.reply(`😁 consumed *${+m.diamond}* 💎`)
                 }
                 break
             }
@@ -683,12 +683,12 @@ case 'remove':
                 pp = await this.profilePictureUrl(user, 'image');
                 ppgp = await this.profilePictureUrl(id, 'image');
             } catch (error) {
-                console.error(`Error retrieving profile picture: ${error}`);
+                console.error(`gmx error retrieving profile picture: ${error}`);
                 pp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
                 ppgp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
             } finally {
                 let text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user').replace('@group', await this.getName(id)).replace('@desc', groupMetadata.desc?.toString() || 'Desconocido') :
-                    (chat.sBye || this.bye || conn.bye || 'HELLO This Is 💝 Kinflux bot , @user')).replace('@user', '@' + user.split('@')[0]);
+                    (chat.sBye || this.bye || conn.bye || 'HELLO This Is 💝 official gmx bot , @user')).replace('@user', '@' + user.split('@')[0]);
 
                 let nthMember = groupMetadata.participants.length;
                 let secondText = action === 'add' ? `Welcome, ${await this.getName(user)}, our ${nthMember}th member` : `Goodbye, our ${nthMember}th group member`;
@@ -703,7 +703,7 @@ case 'remove':
 
                     this.sendFile(id, action === 'add' ? welBuffer : leaBuffer, 'welcome.png', text, null, false, { mentions: [user] });
                 } catch (error) {
-                    console.error(`Error generating welcome/leave image: ${error}`);
+                    console.error(`gmx error generating welcome/leave image: ${error}`);
                 }
             }
         }
@@ -736,13 +736,13 @@ export async function groupsUpdate(groupsUpdate) {
         let chats = global.db.data.chats[id], text = ''
         if (!chats?.detect) continue
         if (groupUpdate.desc) text = (chats.sDesc || this.sDesc || conn.sDesc || '```Description has been changed to```\n@desc').replace('@desc', groupUpdate.desc)
-        if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || '```Subject has been changed by kinflux bot to```\n@subject').replace('@subject', groupUpdate.subject)
-        if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || '```Icon has been changed by kinflux bot to```').replace('@icon', groupUpdate.icon)
+        if (groupUpdate.subject) text = (chats.sSubject || this.sSubject || conn.sSubject || '```Subject has been changed by gmx bot to```\n@subject').replace('@subject', groupUpdate.subject)
+        if (groupUpdate.icon) text = (chats.sIcon || this.sIcon || conn.sIcon || '```Icon has been changed by gmx bot to```').replace('@icon', groupUpdate.icon)
         if (groupUpdate.revoke) text = (chats.sRevoke || this.sRevoke || conn.sRevoke || '```Group link has been changed to```\n@revoke').replace('@revoke', groupUpdate.revoke)
-        if (groupUpdate.announce == true) text = (chats.sAnnounceOn || this.sAnnounceOn || conn.sAnnounceOn || '*Group has been closed by kinflux Wa bot*')
+        if (groupUpdate.announce == true) text = (chats.sAnnounceOn || this.sAnnounceOn || conn.sAnnounceOn || '*Group has been closed by gmx Wa bot*')
         if (groupUpdate.announce == false) text = (chats.sAnnounceOff || this.sAnnounceOff || conn.sAnnounceOff || '*Group has been opened✨!*')
-        if (groupUpdate.restrict == true) text = (chats.sRestrictOn || this.sRestrictOn || conn.sRestrictOn || '*Group has✨ all participants BY KINFLUX BOT✨!*')
-        if (groupUpdate.restrict == false) text = (chats.sRestrictOff || this.sRestrictOff || conn.sRestrictOff || '*Group has been only admin! by kinflux bot✨*')
+        if (groupUpdate.restrict == true) text = (chats.sRestrictOn || this.sRestrictOn || conn.sRestrictOn || '*Group has✨ all participants BY GRANDMASTER X BOT✨!*')
+        if (groupUpdate.restrict == false) text = (chats.sRestrictOff || this.sRestrictOff || conn.sRestrictOff || '*Group has been only admin! by gmx bot✨*')
         if (!text) continue
         await this.sendMessage(id, { text, mentions: this.parseMention(text) })
     }
@@ -760,7 +760,7 @@ export async function deleteUpdate(message) {
         if (chat.delete)
             return 
             await this.reply(msg.chat, `
-≡ ⚡ kinflux bot ⚡ WA BOT deleted a message 
+≡ 🌝 gmx bot 🌚 WA BOT deleted a message 
 ┌─⊷  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
 ▢ *Number :* @${participant.split`@`[0]} 
 └─────────────
@@ -778,16 +778,16 @@ TO DEACTIVE , PRESS
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '*ᴏɴʟʏ ⚡ kinflux bot ⚡ ᴅᴇᴠᴇʟᴏᴘᴇʀ* • This command can only be used by the *⚡ kinflux bot ⚡ Creator*',
-        owner: '*ᴏɴʟʏ ⚡ kinflux bot ⚡ ᴏᴡɴᴇʀ* • This command can only be used by the *⚡ kinflux Bot Owner ⚡',
-        mods: '*ᴏɴʟʏ ⚡ kinflux bot ⚡ ᴍᴏᴅᴇʀᴀᴛᴏʀ* •This function is only for *⚡ kinflux Bot ⚡ moderators*',
-        premium: '*ᴏɴʟʏ ⚡ kinflux bot⚡ ᴘʀᴇᴍɪᴜᴍ user* • This command is for *⚡ kinflux bot ⚡ Premium members only',
-        group: '*⚡ kinflux bot ⚡ɢʀᴏᴜᴘ ᴄʜᴀᴛ* • This command can only be used in ⚡kinflux bots ⚡ groups',
-        private: '*⚡kinflux bot ⚡ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ* • This command can only be used in the *private chat of the Bot*',
-        admin: '*ᴏɴʟʏ ⚡ kinflux bot ⚡ ᴀᴅᴍɪɴ* • This command is only for *⚡kinflux bot ⚡ Group Admins*',
-        botAdmin: '*ᴏɴʟʏ ⚡kinflux ʙᴏᴛ ⚡ᴀᴅᴍɪɴ* • To use this command I must be *Group Admin!*',
-        unreg: '*ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ʀᴇɢɪsᴛᴇʀᴇᴅ ʏᴇᴛ* •  Sign in to use this feature Typing:\n\n*/reg name.age*\n\n📌Example : */reg zamzack254.20*', 
-        restrict: '*ʀᴇsᴛʀɪᴄᴛ By ⚡kinflux bot ⚡ * • This feature is *disabled* by ⚡kinflux bot⚡ a whatsApp bot',
+        rowner: '*ᴏɴʟʏ ⚡ grandmaster x bot ⚡ ᴅᴇᴠᴇʟᴏᴘᴇʀ* • This command can only be used by the *⚡ grandmaster x bot ⚡ Creater Arju-sonwani*',
+        owner: '*ᴏɴʟʏ ⚡ grandmaster x bot ⚡ ᴏᴡɴᴇʀ* • This command can only be used by the *⚡ grandmaster x bot Owner ⚡',
+        mods: '*ᴏɴʟʏ ⚡ grandmaster x bot ⚡ ᴍᴏᴅᴇʀᴀᴛᴏʀ* •This function is only for *⚡ grandmaster x bot ⚡ moderators*',
+        premium: '*ᴏɴʟʏ ⚡ grandmaster x bot⚡ ᴘʀᴇᴍɪᴜᴍ user* • This command is for *⚡ grandmaster x bot ⚡ Premium members only',
+        group: '*⚡ grandmaster x bot ⚡ɢʀᴏᴜᴘ ᴄʜᴀᴛ* • This command can only be used in ⚡grandmaster x bot ⚡ groups',
+        private: '*⚡grandmaster x bot ⚡ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ* • This command can only be used in the *private chat of the GMX Bot*',
+        admin: '*ᴏɴʟʏ ⚡ grandmaster x bot ⚡ ᴀᴅᴍɪɴ* • This command is only for *⚡grandmaster x bot ⚡ Group Admins*',
+        botAdmin: '*ᴏɴʟʏ ⚡grandmaster x ʙᴏᴛ ⚡ᴀᴅᴍɪɴ* • To use this command I must be *Group Admin!*',
+        unreg: '*ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ʀᴇɢɪsᴛᴇʀᴇᴅ ʏᴇᴛ* •  Sign in to use this feature Typing:\n\n*/reg name.age*\n\n📌Example : */reg arju.20*', 
+        restrict: '*ʀᴇsᴛʀɪᴄᴛ By ⚡grandmaster x bot ⚡ * • This feature is *disabled* by ⚡grandmaster x bot⚡ a whatsApp bot',
     }[type]
     if (msg) return m.reply(msg)
 }
