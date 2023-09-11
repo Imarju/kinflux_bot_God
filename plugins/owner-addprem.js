@@ -10,7 +10,7 @@ if (global.prems.includes(who.split`@`[0])) throw '✳️ The user Mentioned Alr
 global.prems.push(`${who.split`@`[0]}`)
 
 conn.reply(m.chat, `
-✅ PREMIUM
+🎉 GMX BOT PREMIUM
 
 @${who.split`@`[0]} now you become a premium user
 ┌───────────
