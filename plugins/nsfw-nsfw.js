@@ -2,9 +2,9 @@ import fetch from 'node-fetch'
 import axios from 'axios'
 let handler = async (m, { conn, usedPrefix, command }) => {
 	
-	if (!global.db.data.chats[m.chat].nsfw) throw `🚫 group doesnt supprt nsfw \n\n enable it by \n*${usedPrefix}enable* nsfw`
+	if (!global.db.data.chats[m.chat].nsfw) throw `🌚 this group doesnt supprt nsfw \n\n enable it by \n*${usedPrefix}enable* nsfw`
     let user = global.db.data.users[m.sender].age
-    if (user < 17) throw m.reply(`❎ uneed to be atleast 18 years`) 
+    if (user < 17) throw m.reply(`😂 u need to be atleast 18 years old`) 
    
 m.react(rwait)
 let type = (command).toLowerCase()
@@ -14,28 +14,28 @@ switch (type) {
 case 'ass':
 case 'gand':
     let as = await conn.getFile(global.API('fgmods', '/api/nsfw/ass', { }, 'apikey'))
-    conn.sendFile(m.chat, as.data, 'img.jpg', `✅ Random ${command}`, m)
+    conn.sendFile(m.chat, as.data, 'img.jpg', `🌚 Random ${command}`, m)
     m.react(xmoji) 
 break
 
 case 'boobs':
 case 'boobies':
    let xb = await conn.getFile(global.API('fgmods', '/api/nsfw/boobs', { }, 'apikey'))
-   conn.sendFile(m.chat, xb.data, 'img.jpg', `✅ Random ${command}`, m)
+   conn.sendFile(m.chat, xb.data, 'img.jpg', `🌚 Random ${command}`, m)
    m.react(xmoji) 
 break
 
 case 'pussy':
 case 'chut':		
    let xp = await conn.getFile(global.API('fgmods', '/api/nsfw/pussy', { }, 'apikey'))
-   conn.sendFile(m.chat, xp.data, 'img.jpg', `✅ Random ${command}`, m)
+   conn.sendFile(m.chat, xp.data, 'img.jpg', `🌚 Random ${command}`, m)
    m.react(xmoji) 
 break
 
 case 'lesbians':
 case 'lesbian':
    let les = await conn.getFile(global.API('fgmods', '/api/nsfw/lesbian', { }, 'apikey'))
-   conn.sendFile(m.chat, les.data, 'img.jpg', `✅ Random ${command}`, m)
+   conn.sendFile(m.chat, les.data, 'img.jpg', `🌚 Random ${command}`, m)
    m.react(xmoji) 
 break
 
