@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text }) => {
-  if (!text) throw 'Please provide a Pokemon name to search for.';
+  if (!text) throw 'bruhhh 😙 Please provide a Pokemon name to search for.';
 
   const url = `https://some-random-api.com/pokemon/pokedex?pokemon=${encodeURIComponent(text)}`;
 
