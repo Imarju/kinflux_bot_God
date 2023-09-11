@@ -6,7 +6,7 @@ var handler = async (m, { conn, args }) => {
 		let res = await Telesticker(args[0])
 		await m.reply(`Sending ${res.length} stickers...`)
 		if (m.isGroup && res.length > 30) {
-			await m.reply('Number of stickers more than 30, bot will send it in private chat.')
+			await m.reply('Number of stickers more than 30, gmx bot will send it in private chat.')
 			for (let i = 0; i < res.length; i++) {
 				conn.sendMessage(m.sender, { sticker: { url: res[i].url }})
 			}
@@ -41,7 +41,7 @@ async function Telesticker(url) {
 		const data2 = await axios(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${fileId}`);
 		const result = {
 		  status: 200,
-		  author: 'Xfarr05',
+		  author: 'AMAN',
 		  url: `https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/${data2.data.result.file_path}`,
 		};
 		hasil.push(result);
