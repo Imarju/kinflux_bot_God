@@ -222,8 +222,8 @@ let m2 = `
 Bot has more than 300 commands and i am lazy to write all
 `
 //const pp = await (await fetch('https://i.ibb.co/qMG1JPY/fg.jpg')).buffer()
-    let pp = './Guru.jpg' 
-    conn.sendButton(m.chat, m2, '▢ ᴳᵁᴿᵁ  ┃ ᴮᴼᵀ\n▢ Follow on Instagram\nhttps://www.instagram.com/asli_guru69\n', pp, [
+    let pp = './sexy.jpg' 
+    conn.sendButton(m.chat, m2, '', pp, [
       ['⏍ Info', `${usedPrefix}botinfo`],
       ['⌬ Groups', `${usedPrefix}gpguru`]
     ],m, rpyt)
