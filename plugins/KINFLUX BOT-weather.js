@@ -12,10 +12,10 @@ const Minimum_Temperature = res.data.main.temp_min + "°C"
 const Maximum_Temperature = res.data.main.temp_max + "°C"
 const Humidity = res.data.main.humidity + "%"
 const Wind = res.data.wind.speed + "km/h"
-const wea = `「 📍 」PLACE: ${name}\n「 🗺️ 」COUNTRY: ${Country}\n「 🌤️ 」VIEW: ${Weather}\n「 🌡️ 」TEMPERATURE: ${Temperature}\n「 💠 」 MINIMUM TEMPERATURE: ${Minimum_Temperature}\n「 📛 」 MAXIMUM TEMPERATURE: ${Maximum_Temperature}\n「 💦 」HUMIDITY: ${Humidity}\n「 🌬️ 」 WINDSPEED: ${Wind} by kinflux bot`
+const wea = `「 📍 」PLACE: ${name}\n「 🗺️ 」COUNTRY: ${Country}\n「 🌤️ 」VIEW: ${Weather}\n「 🌡️ 」TEMPERATURE: ${Temperature}\n「 💠 」 MINIMUM TEMPERATURE: ${Minimum_Temperature}\n「 📛 」 MAXIMUM TEMPERATURE: ${Maximum_Temperature}\n「 💦 」HUMIDITY: ${Humidity}\n「 🌬️ 」 WINDSPEED: ${Wind} by *gmx bot* official`
 m.reply(wea)
 } catch {
-return "*ERROR*"}}
+return "*GMX ERROR*"}}
 handler.help = ['climate *<place>*']
 handler.tags = ['herramientas']
 handler.command = /^(climate|weather)$/i
