@@ -6,7 +6,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     let img = await q.download()
     if (!img) throw `*IMAGE NOT FOUND, PLEASE REPLY TO AN IMAGE USING THE COMMAND ${usedPrefix + command}*`
     await conn.updateProfilePicture(bot, img)
-    conn.reply(m.chat, '*SUCCESSFULLY CHANGED THE PROFILE PICTURE OF THE BOT NUMBER*', m)
+    conn.reply(m.chat, '*SUCCESSFULLY CHANGED THE PROFILE PICTURE OF THE GMX BOT NUMBER*', m)
     } else throw `*IMAGE NOT FOUND, PLEASE REPLY TO AN IMAGE USING THE COMMAND ${usedPrefix + command}*`}
     handler.command = /^setppbot$/i
     handler.owner = true
