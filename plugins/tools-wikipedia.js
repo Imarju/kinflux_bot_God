@@ -3,7 +3,7 @@ import cheerio from 'cheerio'
 
 
 let handler = async (m, { text }) => {
-	if (!text) throw `✳️ Enter what you want to search for on Wikipedia` 
+	if (!text) throw `✳️  GMX BOT SAYs 🙄 Enter what you want to search for on Wikipedia` 
 	
     try {
 	const link =  await axios.get(`https://es.wikipedia.org/wiki/${text}`)
@@ -16,7 +16,7 @@ let handler = async (m, { text }) => {
 
 ${resulw}`)
 } catch (e) {
-  m.reply('⚠️ No results found ')
+  m.reply('⚠️ sorry bruhhh 🙏 No results found ')
 }
 }
 handler.help = ['wikipedia']
