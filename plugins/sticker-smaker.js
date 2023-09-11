@@ -7,7 +7,7 @@ let handler = async (m, { conn, usedPrefix, text, command }) => {
 let effect = text.trim().toLowerCase()
 if (!effects.includes(effect)) throw `
 
-┌─⊷ *EFFECTS*
+┌─⊷ *GMX BOT S EFFECTS*
 ${effects.map(effect => `▢ ${effect}`).join('\n')}
 └───────────
 
@@ -16,8 +16,8 @@ ${usedPrefix + command} wasted
 `.trim()
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || ''
-if (!mime) throw '✳️ Respond to an image'
-if (!/image\/(jpe?g|png)/.test(mime)) throw `✳️ Format not supported`
+if (!mime) throw 'Bruuhhh 😙 respond to an image'
+if (!/image\/(jpe?g|png)/.test(mime)) throw `😑😑😑 bc this rormat not supported`
 let img = await q.download()
 let url = await uploadImage(img)
 let apiUrl = global.API('https://some-random-api.com/canvas/', encodeURIComponent(effect), {
