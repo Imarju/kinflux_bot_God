@@ -1,7 +1,7 @@
 let handler = async (m, { conn, usedPrefix, command}) => {
 let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
-let pp = './sexy.jpg'
+let pp = './yal.png'
 let more = String.fromCharCode(8206)
 let readMore = more.repeat(850) 
 let lkr = `❀° ┄──•••───╮
@@ -669,7 +669,9 @@ let lkr = `❀° ┄──•••───╮
 ▢ $
 └───────────                           
 
-*There are 18+ nsfw and hentai commands* 
+*There are 18+ nsfw and hentai commands*      
+
+
 🔞 /genshin
 🔞 /swimsuit 
 🔞 /schoolswimsuit
