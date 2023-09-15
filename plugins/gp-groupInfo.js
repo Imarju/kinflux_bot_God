@@ -7,7 +7,7 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
     const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n')
     const owner = groupMetadata.owner || groupAdmins.find(p => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net'
     let text = `
-┌──「 *INFO GROUP* 」
+┌──「 *GMX INFO GROUP* 」
 ▢ *♻️ID:*
    • ${groupMetadata.id}
 ▢ *🔖NAME* : 
@@ -24,6 +24,8 @@ let handler = async (m, { conn, participants, groupMetadata }) => {
 • ${detect ? '✅' : '❎'} Detector
 • ${del ? '❎' : '✅'} Anti Delete
 • ${antiLink ? '✅' : '❎'} Anti Link WhatsApp
+
+*SUPPORT ME ON INSTAGRAM AND GET YOUR OWN BOT :* https://instagram.com/gmx_grand_master_x?igshid=YTQwZjQ0NmI0OA==
 
 *▢  📬 message settings:*
 • Welcome: ${sWelcome}
