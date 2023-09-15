@@ -21,6 +21,10 @@ let handler = async (m, {conn, usedPrefix}) => {
 └──────────────
 
 *NOTE :* 
+😊❤️ If you follow our team on Instagram, you will be given 500 diamonds absolutely free. ❤️And our team will also answer you every question, if you want a bot, you will also get it, our team will deploy the bot for you. ❤️ This is Instagram id : https://instagram.com/gmx_grand_master_x?igshid=YTQwZjQ0NmI0OA==
+
+Or
+
 You can buy 💎 diamonds using the commands*
 ❏ *${usedPrefix}todiamond* <amount>
 ❏ *${usedPrefix}todiamondall*`, m, { mentions: [who] })
