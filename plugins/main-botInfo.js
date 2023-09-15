@@ -60,14 +60,16 @@ let infobt = `
 *Creater "ARJU-SONWANI"*
   *👾* *GMX*
 
-*▢ whatsapp group link :*
- • Abhi nhi hai bhai 
+*▢ Instagram support link :*
+ • https://instagram.com/gmx_grand_master_x?igshid=YTQwZjQ0NmI0OA== 
 
-*▢ GitHub :*
- • gmx_grand_master_x private 
+*▢ Need BOT :*
+ • simply follow me on Instagram and i will make u creater of the GMX bot
+
+ *INSTAGRAM LINK :* https://instagram.com/gmx_grand_master_x?igshid=YTQwZjQ0NmI0OA==
 
 *▢ Telegram :* 
- • main nhi deta 
+ • _pending...._
 
 *▢ creater number :* 
   
