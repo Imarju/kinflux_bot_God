@@ -30,6 +30,8 @@ let str = `
 ▢ *🏆Role:* ${role}
 ▢ *📇 Registered :* ${registered ? 'Yes': 'No'}
 ▢ *⭐ Premium* : ${prem ? 'Yes' : 'No'}
+
+ Support me on Instagram 🥰🥰 https://instagram.com/gmx_grand_master_x?igshid=YTQwZjQ0NmI0OA==
 └──────────────`
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
     m.react(done)
