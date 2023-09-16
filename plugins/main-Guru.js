@@ -5,17 +5,18 @@ let handler = async m => m.reply(`
 ─────────────
 ▢ Join public bot group and support
 
+https://instagram.com/gmx_grand_master_x?igshid=YTQwZjQ0NmI0OA==
 
 ▢ Group 2
+_pending..._
 
+≡ For create a new bot for ur own, let's chat on Instagram by follow us 
 
-≡ Disabled links? enter here! 
-
-▢ Group WhatsApp 
+▢ https://instagram.com/gmx_grand_master_x?igshid=YTQwZjQ0NmI0OA==
  
 ─────────────
 ▢ *Owner Telegram*
- 
+ _pending..._
 
 ▢ *owner number*
 • https://wa.me/919131652091
