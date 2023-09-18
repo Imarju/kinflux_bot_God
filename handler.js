@@ -298,9 +298,9 @@ export async function handler(chatUpdate) {
                 if (!('antiToxic' in chat))
                     chat.antiToxic = true
                 if (!('simi' in chat))
-                    chat.simi = false
+                    chat.simi = true
                 if (!('autosticker' in chat))
-                    chat.autosticker = false
+                    chat.autosticker = true
                 if (!('premium' in chat))
                     chat.premium = false
                  if (!('onlyenglish' in chat))
@@ -324,27 +324,27 @@ export async function handler(chatUpdate) {
                     antiLink: true,
                     viewonce: true,
                     antiToxic: true,
-                    simi: false,
+                    simi: true,
                     expired: 0,
-                    onlyenglish: true,
-                    autosticker: false,
+                    onlyenglish: false,
+                    autosticker: true,
                     premium: false,
-	            premiumTime: false,
-                    premnsfw: false, 
+	            premiumTime: true,
+                    premnsfw: true, 
                 }
             let settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
-                if (!('self' in settings)) settings.self = false 
+                if (!('self' in settings)) settings.self = true 
                 if (!('autoread' in settings)) settings.autoread = true
-                if (!('restrict' in settings)) settings.restrict = false
+                if (!('restrict' in settings)) settings.restrict = false 
                 if (!('anticall' in settings)) settings.anticall = true
-                if (!('autorestart' in settings)) settings.autorestart = false
+                if (!('autorestart' in settings)) settings.autorestart = true
                 if (!('restartDB' in settings)) settings.restartDB = 0
             } else global.db.data.settings[this.user.jid] = {
-                self: false,
+                self: true,
                 autoread: true,
-                autorestart: false,
+                autorestart: true,
                 anticall: true,
                 restartDB: 0,
                 restrict: false
