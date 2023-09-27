@@ -6,7 +6,7 @@ let handler = async(m, { conn, usedPrefix, command }) => {
 ONLY WANT YOUR LOVE ❤️
 Join my Whatsapp group => 
 SUPPORT ME BY  MAKING 10 MILLION FOLLOWERS ON MY INSTAGRAM, THIS IS LINK https://instagram.com/gmx_grand_master_x?igshid=YTQwZjQ0NmI0OA==`
-let pp = '/gmx.jpg'
+let pp = './yal.png'
 conn.sendFile(m.chat, img, 'img.jpg', don, m)
 }
 
