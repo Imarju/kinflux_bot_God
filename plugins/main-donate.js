@@ -2,11 +2,11 @@
 let handler = async(m, { conn, usedPrefix, command }) => {
 
     let don = `
-≡ *DONATION*
-ONLY WANT YOUR LOVE 
-Join my Whatsapp group => https://chat.whatsapp.com/KggVmnH7ki6HoyD0025gDD
-SUPPORT ME BY  MAKING 69 MILLION FOLLOWERS ON MY INSTAGRAM`
-let img = 'https://raw.githubusercontent.com/diggilly/kinflux-bot/main/Guru.jpg'
+≡ *GMX DONATION*
+ONLY WANT YOUR LOVE ❤️
+Join my Whatsapp group => 
+SUPPORT ME BY  MAKING 10 MILLION FOLLOWERS ON MY INSTAGRAM, THIS IS LINK https://instagram.com/gmx_grand_master_x?igshid=YTQwZjQ0NmI0OA==`
+let pp = '/gmx.jpg'
 conn.sendFile(m.chat, img, 'img.jpg', don, m)
 }
 
