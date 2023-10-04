@@ -42,7 +42,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   let speed = neww - old
   let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
-let pp = './pay.png'
+let pp = './fam.png'
   conn.profilePictureUrl(who, 'image').catch(_ => './Bot.jpg')
 let user = global.db.data.users[who]
   
@@ -64,7 +64,7 @@ let infobt = `
  • https://instagram.com/gmx_grand_master_x?igshid=YTQwZjQ0NmI0OA== 
 
 *▢ Need BOT :*
- • simply follow me on Instagram and i will make u creater of the GMX bot
+ • simply follow me on Instagram and i will make u creater of the GMX bot. And pay 10 rupees INR by scanning the qr ❤️😊 If you have paid Rs 10, then you will be given premium membership and a bot will also be given for you.
 
  *INSTAGRAM LINK :* https://instagram.com/gmx_grand_master_x?igshid=YTQwZjQ0NmI0OA==
 
