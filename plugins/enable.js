@@ -201,7 +201,7 @@ break
      if (!/[01]/.test(command)) return m.reply(`
 ≡ List of options
 
-◈──『 *ADMIN*』───⳹
+◈──『 *GMX ADMIN*』───⳹
 ⛊ welcome
 ⛊ antilink
 ⛊ nsfw
@@ -212,11 +212,11 @@ break
 ⛊ antispam
 ⛊ antitoxic
 ╰──────────⳹ 
-◈──『 *USERS*』───⳹
+◈──『 *GMX USERS*』───⳹
 ⛊ autolevelup
 ⛊ chatbot 
 ╰──────────⳹
-◈──『 *OWNER*』───⳹
+◈──『 *GMX OWNER*』───⳹
 ⛊ selfmode
 ⛊ onlydm
 ⛊ grouponly
