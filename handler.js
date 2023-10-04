@@ -38,7 +38,7 @@ export async function handler(chatUpdate) {
         if (!m)
             return
         m.exp = 0
-        m.limit = false
+        m.limit = true
         try {
             // TODO: use loop to insert data instead of this
             let user = global.db.data.users[m.sender]
@@ -76,7 +76,7 @@ export async function handler(chatUpdate) {
                 if (!('role' in user))
                     user.role = 'Beginner'
                 if (!('autolevelup' in user))
-                    user.autolevelup = false
+                    user.autolevelup = true
                 if (!isNumber(user.money))
                     user.money = 0
                 if (!isNumber(user.atm))
@@ -215,7 +215,7 @@ export async function handler(chatUpdate) {
                     warn: 0,
                     level: 0,                    
                     role: 'Beginner',
-                    autolevelup: false,
+                    autolevelup: true,
                     money: 0,
                     bank: 0,
                     atm: 0,
@@ -282,9 +282,9 @@ export async function handler(chatUpdate) {
                 if (!('detect' in chat))
                     chat.detect = true
                 if (!('sWelcome' in chat))
-                    chat.sWelcome = ''
+                    chat.sWelcome = 'Hey parth! Welcome here'
                 if (!('sBye' in chat))
-                    chat.sBye = ''
+                    chat.sBye = 'hey parth! Good bye'
                 if (!('sPromote' in chat))
                     chat.sPromote = ''
                 if (!('sDemote' in chat))
@@ -300,7 +300,7 @@ export async function handler(chatUpdate) {
                 if (!('simi' in chat))
                     chat.simi = true
                 if (!('autosticker' in chat))
-                    chat.autosticker = true
+                    chat.autosticker = false
                 if (!('premium' in chat))
                     chat.premium = false
                  if (!('onlyenglish' in chat))
@@ -316,8 +316,8 @@ export async function handler(chatUpdate) {
                     isBanned: false,
                     welcome: true,
                     detect: true,
-                    sWelcome: '',
-                    sBye: '',
+                    sWelcome: 'Hey parth! Welcome here',
+                    sBye: 'hey parth! Good bye',
                     sPromote: '',
                     sDemote: '',
                     delete: true,
@@ -327,7 +327,7 @@ export async function handler(chatUpdate) {
                     simi: true,
                     expired: 0,
                     onlyenglish: false,
-                    autosticker: true,
+                    autosticker: false,
                     premium: false,
 	            premiumTime: true,
                     premnsfw: true, 
@@ -335,16 +335,16 @@ export async function handler(chatUpdate) {
             let settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
-                if (!('self' in settings)) settings.self = true 
+                if (!('self' in settings)) settings.self = false
                 if (!('autoread' in settings)) settings.autoread = true
                 if (!('restrict' in settings)) settings.restrict = false 
                 if (!('anticall' in settings)) settings.anticall = true
-                if (!('autorestart' in settings)) settings.autorestart = true
+                if (!('autorestart' in settings)) settings.autorestart = false
                 if (!('restartDB' in settings)) settings.restartDB = 0
             } else global.db.data.settings[this.user.jid] = {
-                self: true,
+                self: false,
                 autoread: true,
-                autorestart: true,
+                autorestart: false,
                 anticall: true,
                 restartDB: 0,
                 restrict: false
