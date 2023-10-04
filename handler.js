@@ -133,10 +133,10 @@ export async function handler(chatUpdate) {
                 global.db.data.chats[m.chat] = {}
             if (chat) {
                 if (!("antiDelete" in chat)) chat.antiDelete = false
-                if (!("antiLink" in chat)) chat.antiLink = false
-                if (!("antiSticker" in chat)) chat.antiSticker = false
-                if (!("antiToxic" in chat)) chat.antiToxic = false
-                if (!("detect" in chat)) chat.detect = false
+                if (!("antiLink" in chat)) chat.antiLink = true
+                if (!("antiSticker" in chat)) chat.antiSticker = true
+                if (!("antiToxic" in chat)) chat.antiToxic = true
+                if (!("detect" in chat)) chat.detect = true
                 if (!("getmsg" in chat)) chat.getmsg = true
                 if (!("isBanned" in chat)) chat.isBanned = false
                 if (!("nsfw" in chat)) chat.nsfw = false
@@ -146,44 +146,44 @@ export async function handler(chatUpdate) {
                 if (!("sPromote" in chat)) chat.sPromote = ""
                 if (!("sWelcome" in chat)) chat.sWelcome = ""
                 if (!("useDocument" in chat)) chat.useDocument = false
-                if (!("viewOnce" in chat)) chat.viewOnce = false
-                if (!("welcome" in chat)) chat.welcome = false
+                if (!("viewOnce" in chat)) chat.viewOnce = true
+                if (!("welcome" in chat)) chat.welcome = true
                 if (!isNumber(chat.expired)) chat.expired = 0
             } else
                 global.db.data.chats[m.chat] = {
                     antiDelete: false,
-                    antiLink: false,
+                    antiLink: true,
                     antiSticker: false,
-                    antiToxic: false,
-                    detect: false,
+                    antiToxic: true,
+                    detect: true,
                     expired: 0,
                     getmsg: true,
                     isBanned: false,
                     nsfw: false, 
                     sBye: "",
                     sDemote: "",
-                    simi: false,
+                    simi: true,
                     sPromote: "",
                     sticker: false,
                     sWelcome: "",
                     useDocument: false,
-                    viewOnce: false,
-                    welcome: false,
+                    viewOnce: true,
+                    welcome: true,
                 }
           
                 
             let settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== "object") global.db.data.settings[this.user.jid] = {}
             if (settings) {
-                if (!("self" in settings)) settings.self = false
-                if (!("autoread" in settings)) settings.autoread = false
+                if (!("self" in settings)) settings.self = true
+                if (!("autoread" in settings)) settings.autoread = true
                 if (!("restrict" in settings)) settings.restrict = false
                 if (!("restartDB" in settings)) settings.restartDB = 0
                 if (!("status" in settings)) settings.status = 0
 
             } else global.db.data.settings[this.user.jid] = {
-                self: false,
-                autoread: false,
+                self: true,
+                autoread: true,
                 restrict: false,
                 restartDB: 0,
                 status: 0
@@ -384,11 +384,11 @@ export async function handler(chatUpdate) {
                 else
                     m.exp += xp
                     if (!isPrems && plugin.credit && global.db.data.users[m.sender].credit < plugin.credit * 1) {
-                        this.reply(m.chat, `🟥 You don't have enough gold`, m)
+                        this.reply(m.chat, `Hey parth! You don't have enough gold`, m)
                         continue // Gold finished
                     }
                     if (plugin.level > _user.level) {
-                        this.reply(m.chat, `🟥 Level required ${plugin.level} to use this command. \nYour level ${_user.level}`, m)
+                        this.reply(m.chat, `Hey parth! Level required ${plugin.level} to use this command. \nYour level ${_user.level}`, m)
                         continue // If the level has not been reached
                     }
                 let extra = {
@@ -525,7 +525,7 @@ export async function participantsUpdate({
         bye: '👋',
         bug: '🐛',
         mail: '📮',
-        owner: '👑'
+        owner: '🔱'
     };
 
     
@@ -571,7 +571,7 @@ export async function participantsUpdate({
                         contextInfo: {
                         mentionedJid: [user],
                         externalAdReply: {
-                        title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
+                        title: "OFFICIAL GMX-BOT",
                         body: "welcome to Group",
                         thumbnailUrl: welcomeApiUrl,
                         sourceUrl: 'https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp',
@@ -599,7 +599,7 @@ export async function participantsUpdate({
                   pp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
                   ppgp = 'https://i.imgur.com/8B4jwGq.jpeg'; // Assign default image URL
                 } finally {
-                  let text = (chat.sBye || this.bye || conn.bye || 'HELLO, @user')
+                  let text = (chat.sBye || this.bye || conn.bye || 'Hey parth!, @user')
                     .replace('@user', '@' + user.split('@')[0]);
           
                   let nthMember = groupMetadata.participants.length;
@@ -624,7 +624,7 @@ export async function participantsUpdate({
                         contextInfo: {
                         mentionedJid: [user],
                         externalAdReply: {
-                        title: "ᴛʜᴇ ɢᴜʀᴜ-ʙᴏᴛ",
+                        title: "OFFICIAL GMX-BOT",
                         body: "Goodbye from  Group",
                         thumbnailUrl: leaveApiUrl,
                         sourceUrl: 'https://chat.whatsapp.com/F3sB3pR3tClBvVmlIkqDJp',
@@ -805,7 +805,7 @@ export async function presenceUpdate(presenceUpdate) {
 dfail
  */
 global.dfail = (type, m, conn) => {
-    const userTag = `👋 Hai *@${m.sender.split("@")[0]}*, `
+    const userTag = `Hey parth! *@${m.sender.split("@")[0]}*, `
     const emoji = {
         general: '⚙️',
         owner: '👑',
