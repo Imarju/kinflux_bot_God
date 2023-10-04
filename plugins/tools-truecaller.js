@@ -1,27 +1,27 @@
-//ARJU-BOT
-import fetch from 'node-fetch';
+//GMX-BOT
+/*import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text }) => {
-  if (!text) throw 'arey bhai mujhe koi number provide karo🙄.';
+  if (!text) throw 'HEY PARTH mujhe koi number provide karo.';
 
   try {
     let res = await fetch(`https://inrl-web.onrender.com/api/truecaller?number=${text}`);
 
     if (!res.ok) {
-      throw new Error(`API request failed with status ${res.status}`);
+      throw new Error(`API request failed ho gaya vo bhi ishke sath status ${res.status}`);
     }
 
     let json = await res.json();
 
     if (!json.data || !json.data.length) {
-      throw new Error('No data found in API response.');
+      throw new Error('hey parth mujhe API response ke liye koi bhi data nhi mila hai.');
     }
 
     // Focus on the first object inside the data array.
     let data = json.data[0];
 
     // Add custom property.
-    data.creator = 'ARJU';
+    data.creator = 'Arju-sonwani';
 
     let response = '';
 
@@ -59,12 +59,48 @@ let handler = async (m, { conn, text }) => {
     }
 
     // Add 'creator' property to the response
-    response += `𝗖𝗥𝗘𝗔𝗧𝗢𝗥: *ARJU-SONWANI*`;
+    response += `𝗖𝗥𝗘𝗔𝗧𝗢𝗥: Arju-sonwani`;
 
     m.reply(response);
   } catch (error) {
     console.error(error);
-    m.reply('SORRY bidu mujhe maaf kar do main kisi ka information reveal nhi kar sakta 😥😥 ye unke privacy ke against ho jayega ⚠️ tum badme try kar lena 😅');
+    m.reply('hey parth mujhe kaam karte wakt ek problem ho rahi hai aap badme try kar lena.');
+  }
+};
+
+handler.help = ['true'];
+handler.tags = ['tools'];
+handler.command = /^(true|caller)$/i;
+
+export default handler;*/
+import fetch from 'node-fetch';
+
+let handler = async (m, { conn, text }) => {
+  if (!text) throw 'HEY PARTH mujhe number dedo!';
+
+  try {
+    let res = await fetch(`https://inrl-web.onrender.com/api/truecaller?number=${text}`);
+
+    if (!res.ok) {
+      throw new Error(`API request failed ho gaya PARTH vo bhi ishke sath status ${res.status}`);
+    }
+
+    let json = await res.json();
+
+    console.log('JSON response:', json);
+
+    
+    json.creator = 'Arju-sonwani';
+
+    let milf = '';
+    for (let prop in json) {
+      milf += `• *${prop}:* ${json[prop]}\n`;
+    }
+
+    m.reply(milf);
+  } catch (error) {
+    console.error(error);
+    // Handle the error appropriately
   }
 };
 

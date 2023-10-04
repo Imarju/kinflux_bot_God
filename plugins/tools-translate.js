@@ -1,5 +1,5 @@
 
-import translate from '@vitalets/google-translate-api'
+import {translate} from '@vitalets/google-translate-api'
 const defaultLang = 'hi'
 const tld = 'cn'
 
@@ -8,7 +8,7 @@ let handler = async (m, { args, usedPrefix, command }) => {
 📌 *Example:*
 
 *${usedPrefix + command}* <id> [text]
-*${usedPrefix + command}* hi Bolo GMX bot ki jai
+*${usedPrefix + command}* hi namaste bharat 
 
 ≡ *List of supported languages:* 
 
@@ -31,7 +31,7 @@ https://cloud.google.com/translate/docs/languages
     } 
 
 }
-handler.help = ['trad <leng> <text>']
+handler.help = ['translate <lang> <text>']
 handler.tags = ['tools']
 handler.command = ['translate', 'tl', 'trad', 'tr']
 
