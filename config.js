@@ -7,13 +7,13 @@ import axios from 'axios'
 
 
 global.owner = [
-  ['918235857980', 'supreme', true],
+  ['919131652091', 'Arju-sonwani', true],
   ['919131652091', 'gmx official', true], 
   [''] 
 ] //Number of owners
 
-global.mods = ['919131652091','918235857980'] 
-global.prems = ['919131652091','918235857980']
+global.mods = ['919131652091','919131652091'] 
+global.prems = ['919131652091','919131652091']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
@@ -49,8 +49,9 @@ global.APIKeys = { // APIKey Here
 // Sticker WM
 global.botname = 'gmx bot'
 global.premium = 'true'
-global.packname = 'gmx┃ᴮᴼᵀ' 
-global.author = 'Arju-sonwani' 
+global.packname = '＊*•̩̩͙✩•̩̩͙*˚𝕋𝚑ᵋ ٥ᶠᶠﺂc𝘪ᤂɩ ɠ𝑚x 𝙗٥τ*•̩̩͙✩•̩̩͙*˚＊' 
+
+global.author = '✿✧✰丹𝒓𝔧𝕦Ꭶоทຟⲁทı✰✧✿' 
 global.igfg = '❤️ Follow on Instagram ID gmx_grand_master_x' 
 global.dygp = ''
 global.fgsc = '' 
@@ -59,7 +60,7 @@ global.fgpyp = ''
 global.fglog = '' 
 
 
-global.wait = '*⌛ _loading..._*\n*▰▰▰▱▱▱▱▱ sorry bruhh music and video download system is blocked 🚫 by GMX BOT creator ARJU*'
+global.wait = '*⌛ _loading..._*\n*▰▰▰▱▱▱▱▱ sorry bruhh youtube music and youtube video download system is blocked 🚫 by GMX BOT creator ARJU*'
 global.rwait = '⌛'
 global.dmoji = '💯'
 global.done = '💷'
