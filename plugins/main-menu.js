@@ -20,7 +20,7 @@ let handler = async (m, { conn, usedPrefix, command}) => {
     let uptime = clockString(_uptime)
 let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
-let pp = './sigma.png'
+let pp = './boy.jpg'
 let user = global.db.data.users[who]
 let { name, exp, diamond, lastclaim, registered, regTime, age, level, role, warn } = global.db.data.users[who]
 let { min, xp, max } = xpRange(user.level, global.multiplier)
@@ -35,9 +35,9 @@ let readMore = more.repeat(850)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 ┌─•✧ *INFO USER BOT* ✧•─┐
-┊ 👨‍💻  *USER :* ${taguser}
-┊ 👨‍💻  *NAME :* ${name}
-┊ 😈  *CREATER :* ${author}
+┊ 👨‍💻  *USER  :* ${taguser}
+┊ 👨‍💻  *NAME  :* ${name}
+┊ 😈  *OWNER :* ${author}
 ┊ 💎  *DIAMONDS :* ${diamond}
 ┊ 📱  *RANK :* ${role}
 ┊ 🃏  *EXPERIENCE :* ${exp}
@@ -48,7 +48,7 @@ let str = `
 ┊ ⏲️   *TIME :* ${wib}
 └── •✧✧• ───────┘ 
 
-┌─•✧ *GMX BOT INFO* ✧•──┐
+┌─•✧ *BOT INFO* ✧•──┐
 ┊ 🤖  *BOT :* ${botname}
 ┊ 👨‍💻  *PLATFORM :* *GMX private platform* 
 ┊ 🛑  *PREFIX :* ${usedPrefix}
@@ -57,16 +57,16 @@ let str = `
 ┊ 🗃️  *TOTAL USERS :* ${totaluser}
 └─── •✧✧• ────┘ 
 ≻───── ⋆✩⋆ ─────≺
-*✎USE ${usedPrefix}list TO SEE ALL FUCKKKKING COMMANDS*
+*New features are added to the bot every 3 month's*
 
 *THIS IS OTHER MENU*
 
 ┏─────────────────⬣
-┆ *ki haal chaal* ${name} 
-¦IF U WANT TO ADD *GMX BOT* IN YOUR ¦GROUP PLEASE
-¦CONTACT TO MY OWNER CREATER ❤️
+┆ *Hey parth!* ${name} 
+¦IF YOU WANT TO ADD BOT IN GROUP CONTACT TO MY OWNER
+¦❤️
 ┗┬──────────────┈ ⳹
-┏┤ GMX BOT Info  
+┏┤  *BOT Info*  
 ┆┗──────────────┈ ⳹
 ┆♠︎ 𝗕𝗼𝘁 𝗡𝗮𝗺𝗲 : ${botname}
 ┆♠︎ 𝗢𝘄𝗻𝗲𝗿 𝗡𝗮𝗺𝗲 : ${author}
