@@ -29,7 +29,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     } else if (text == 'scissors') {
         if (astro == 'paper') {
             global.db.data.users[m.sender].exp += 300
-            m.reply(`▢ congratulations u *won* 🎊\n\n‣ You : ${text}\n‣ ARJU : ${astro}\n\n🎁 Points *+${poin} XP* 🎉 Arju want to give you some diamonds now contact him`)
+            m.reply(`▢ congratulations u *won* 🎊\n\n‣ You : ${text}\n‣ ARJU : ${astro}\n\n🎁 Points *+${poin} XP* 🎉 Arju and Sudip Biswas want to give you some diamonds now contact him`)
         } else {
           global.db.data.users[m.sender].exp -= 300
             m.reply(`▢ *lost*\n\n‣ You : ${text}\n‣ ARJU : ${astro}\n\nPoints *-${poin} XP*`)
