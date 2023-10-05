@@ -1,11 +1,11 @@
 let handler = async (m, { conn, usedPrefix, command}) => {
 let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
 if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
-let pp = './sigma.png'
+let pp = './boy.jpg'
 let more = String.fromCharCode(8206)
 let readMore = more.repeat(850) 
 let lkr = `❀° ┄──•••───╮
-  *🌝Grandmaster X BOT menu🌝*
+  *🌿 BOT MENU 🌿*
 ╰───•••──┄ °❀     
 ┏━━━ʕ•㉨•ʔ━━━┓
 ⎪⌲🤖 _${usedPrefix}ping_
@@ -19,11 +19,11 @@ let lkr = `❀° ┄──•••───╮
 ⎪⌲🤖 _${usedPrefix}groups_
 ⎪⌲🤖 _${usedPrefix}blocklist_
 ⎪⌲🤖 _${usedPrefix}listprem_
-⎪⌲🤖    *GMX Robo*
+⎪⌲🤖    *Hey parth!*
 ┗━━━ʕ•㉨•ʔ━━━┛
 
 ❀° ┄──•••───╮
-*ARJU's MENU*  
+*DEVELOPER MENU*  
 ╰───•••──┄ °❀     
 ┏━━━ʕ•㉨•ʔ━━━┓
 ⎪⌲🌟  _${usedPrefix}banchat_
@@ -64,7 +64,7 @@ let lkr = `❀° ┄──•••───╮
 ┗━━━ʕ•㉨•ʔ━━━┛
 
 ❀° ┄──•••───╮
-   𝘿𝙇 𝙈𝙀𝙉𝙐 
+*DOWLAND MENU*
 ╰───•••──┄ °❀     
 ┏━━━ʕ•㉨•ʔ━━━┓
 ⎪⌲💎_${usedPrefix}play_
@@ -110,7 +110,7 @@ let lkr = `❀° ┄──•••───╮
 ┗━━━ʕ•㉨•ʔ━━━┛
 
 ❀° ┄──•••───╮
-  𝙁𝙐𝙉 𝙈𝙀𝙉𝙐
+  *FUN MENU*
 ╰───•••──┄ °❀     
 ┏━━━ʕ•㉨•ʔ━━━┓
 ⎪⌲🎭 _${usedPrefix}character_
@@ -747,7 +747,7 @@ let lkr = `❀° ┄──•••───╮
 
 *Please don't use hentai commands more than 50*
 
-┗━━━ʕ•🇮🇳GMX🇮🇳•ʔ━━━┛`
+┗━━━ʕ•🇮🇳Sudip Biswas🇮🇳•ʔ━━━┛`
 conn.sendFile(m.chat, pp, 'perfil.jpg', lkr, m, false, { mentions: [who] })
 m.react(done)
 }
