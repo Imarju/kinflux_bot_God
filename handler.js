@@ -760,7 +760,7 @@ export async function deleteUpdate(message) {
         if (chat.delete)
             return 
             await this.reply(msg.chat, `
-≡ 🌝 gmx bot 🌚 WA BOT deleted a message 
+≡ 🌝 bot 🌚 WA BOT deleted a message 
 ┌─⊷  𝘼𝙉𝙏𝙄 𝘿𝙀𝙇𝙀𝙏𝙀 
 ▢ *Number :* @${participant.split`@`[0]} 
 └─────────────
@@ -778,16 +778,16 @@ TO DEACTIVE , PRESS
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: '*ᴏɴʟʏ ⚡ grandmaster x bot ⚡ ᴅᴇᴠᴇʟᴏᴘᴇʀ* • This command can only be used by the *⚡ grandmaster x bot ⚡ Creater Arju-sonwani*',
-        owner: '*ᴏɴʟʏ ⚡ grandmaster x bot ⚡ ᴏᴡɴᴇʀ* • This command can only be used by the *⚡ grandmaster x bot Owner ⚡',
-        mods: '*ᴏɴʟʏ ⚡ grandmaster x bot ⚡ ᴍᴏᴅᴇʀᴀᴛᴏʀ* •This function is only for *⚡ grandmaster x bot ⚡ moderators*',
-        premium: '*ᴏɴʟʏ ⚡ grandmaster x bot⚡ ᴘʀᴇᴍɪᴜᴍ user* • This command is for *⚡ grandmaster x bot ⚡ Premium members only',
-        group: '*⚡ grandmaster x bot ⚡ɢʀᴏᴜᴘ ᴄʜᴀᴛ* • This command can only be used in ⚡grandmaster x bot ⚡ groups',
-        private: '*⚡grandmaster x bot ⚡ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ* • This command can only be used in the *private chat of the GMX Bot*',
-        admin: '*ᴏɴʟʏ ⚡ grandmaster x bot ⚡ ᴀᴅᴍɪɴ* • This command is only for *⚡grandmaster x bot ⚡ Group Admins*',
-        botAdmin: '*ᴏɴʟʏ ⚡grandmaster x ʙᴏᴛ ⚡ᴀᴅᴍɪɴ* • To use this command I must be *Group Admin!*',
-        unreg: '*ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ʀᴇɢɪsᴛᴇʀᴇᴅ ʏᴇᴛ* •  Sign in to use this feature Typing:\n\n*/reg name.age*\n\n📌Example : */reg arju.20*', 
-        restrict: '*ʀᴇsᴛʀɪᴄᴛ By ⚡grandmaster x bot ⚡ * • This feature is *disabled* by ⚡grandmaster x bot⚡ a whatsApp bot',
+        rowner: '*ᴏɴʟʏ ⚡ MIZUHARA-CHIZURU MD ⚡ ᴅᴇᴠᴇʟᴏᴘᴇʀ* • This command can only be used by the *⚡ MIZUHARA-CHIZURU MD ⚡ Creater*',
+        owner: '*ᴏɴʟʏ ⚡ MIZUHARA-CHIZURU MD ⚡ ᴏᴡɴᴇʀ* • This command can only be used by the *⚡ MIZUHARA-CHIZURU MD bot Owner ⚡',
+        mods: '*ᴏɴʟʏ ⚡ MIZUHARA-CHIZURU MD ⚡ ᴍᴏᴅᴇʀᴀᴛᴏʀ* •This function is only for *⚡ MIZUHARA-CHIZURU MD ⚡ moderators*',
+        premium: '*ᴏɴʟʏ ⚡ MIZUHARA-CHIZURU MD⚡ ᴘʀᴇᴍɪᴜᴍ user* • This command is for *⚡ MIZUHARA-CHIZURU MD ⚡ Premium members only',
+        group: '*⚡ MIZUHARA-CHIZURU MD ⚡ɢʀᴏᴜᴘ ᴄʜᴀᴛ* • This command can only be used in ⚡MIZUHARA-CHIZURU MD ⚡ groups',
+        private: '*⚡MIZUHARA-CHIZURU MD ⚡ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀᴛ* • This command can only be used in the *private chat of the MIZUHARA-CHIZURU MD*',
+        admin: '*ᴏɴʟʏ ⚡ MIZUHARA-CHIZURU MD ⚡ ᴀᴅᴍɪɴ* • This command is only for *⚡MIZUHARA-CHIZURU MD ⚡ Group Admins*',
+        botAdmin: '*ᴏɴʟʏ ⚡MIZUHARA-CHIZURU MD ʙᴏᴛ ⚡ᴀᴅᴍɪɴ* • To use this command I must be *Group Admin!*',
+        unreg: '*ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ʀᴇɢɪsᴛᴇʀᴇᴅ ʏᴇᴛ* •  Sign in to use this feature Typing:\n\n*/reg name.age*\n\n📌Example : */reg Sudip.18*', 
+        restrict: '*ʀᴇsᴛʀɪᴄᴛ By ⚡MIZUHARA-CHIZURU MD ⚡ * • This feature is *disabled* by ⚡MIZUHARA-CHIZURU MD⚡ a whatsApp bot',
     }[type]
     if (msg) return m.reply(msg)
 }
