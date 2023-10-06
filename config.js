@@ -9,11 +9,11 @@ import axios from 'axios'
 global.owner = [
   ['919131652091', 'Arju-sonwani', true],
   ['919131652091', 'THE-OFFICIAL-GMX-MD', true], 
-  [''] 
+  ['917890773109', 'SUDIP BISWAS' 
 ] //Number of owners
 
-global.mods = ['919131652091','919131652091'] 
-global.prems = ['919131652091','919406095370']
+global.mods = ['919131652091','917890773109'] 
+global.prems = ['919131652091','919406095370','917890773109']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = ['29d4b59a4aa687ca', '5LTV57azwaid7dXfz5fzJu', 'cb15ed422c71a2fb', '5bd33b276d41d6b4', 'HIRO', 'kurrxd09', 'ebb6251cc00f9c63']
@@ -47,13 +47,13 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.botname = 'THE-OFFICIAL-GMX-MD'
+global.botname = 'MIZUHARA-CHIZURU'
 global.premium = 'true'
 global.packname = '＊*•̩̩͙✩•̩̩͙*˚𝕋𝚑ᵋ ٥ᶠᶠﺂc𝘪ᤂɩ ɠ𝑚x 𝙗٥τ*•̩̩͙✩•̩̩͙*˚＊' 
 
-global.author = 'Arju-sonwani' 
+global.author = 'SUDIP BISWAS (Arju-sonwani)' 
 global.igfg = '❤️ Follow on Instagram ID gmx_grand_master_x' 
-global.dygp = ''
+global.dygp = 'https://chat.whatsapp.com/HvHmJcC7tOb9F4aOJFyeVF'
 global.fgsc = '' 
 global.fgyt = ''
 global.fgpyp = ''
