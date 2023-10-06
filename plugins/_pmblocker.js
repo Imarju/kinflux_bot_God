@@ -21,7 +21,7 @@
        // Check if the "PM Blocker" feature is enabled, and the sender is not an owner or real owner 
        if (bot.pmblocker && !isOwner && !isROwner) { 
          // Block the sender unconditionally for any private message sent 
-         await m.reply(`*Hey parth! @${m.sender.split`@`[0]}, Hey parth! बॉट को निजी रूप से संदेश भेजना वर्तमान में अक्षम है. आपको बॉट का उपयोग करने से ब्लॉक कर दिया गया है.*`, false, { mentions: [m.sender] }); 
+         await m.reply(`*Hey parth! @${m.sender.split`@`[0]}, Sending private messages to the bot is currently disabled. You have been blocked from using the bot. Contact to gmx bot developer or paid bot owner for support*`, false, { mentions: [m.sender] }); 
          await this.updateBlockStatus(m.chat, 'block'); 
   
          // Return true to indicate that the private message should be blocked 
