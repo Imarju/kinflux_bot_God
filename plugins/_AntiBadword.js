@@ -1,4 +1,4 @@
-const isToxic = /(gandu|maderchod|bhosdike|bc|mc|sale|bhosda|lauda|chutiya|maa ki chut|behenchod|behen ki chut|tatto ke saudagar|machar ki jhant|jhant ka baal|Randi ka aulad|chuchi|booobies|tolol|idiot|nigga|fuck|dick|bitch|tits|bastard|asshole|a[su,w,yu])/i;
+const isToxic = /(gandu|madarchod|bhosdike|bc|mc|bhosda|land|lund|chutiya|maa ki chut|behenchod|behen ki chut|tatto ke saudagar|machar ki jhant|jhant ka baal|Randi ki aulad|chuchi|booobies|tolol|idiot|nigga|fuck|dick|bitch|wtf|bastard|asshole|what the fuck)/i;
 
 import axios from "axios"
 import fetch from "node-fetch"
@@ -48,9 +48,9 @@ export async function before(m, { isAdmin, isBotAdmin }) {
             toxicityIndex = 5
         }
 
-        var caption = `*[ TOXIC STRENGTH ]*\n\n${toxicityLevels[toxicityIndex]}\n${toxicityVerdict[toxicityIndex]}\n`
+        var caption = `*[ ⚠️ THE LEVEL OF TOXICITY ]*\n\n${toxicityLevels[toxicityIndex]}\n${toxicityVerdict[toxicityIndex]}\n`
         
-        await this.reply(m.chat, `*बुरे शब्दों का पता चला!*\n ${caption} ${isBotAdmin ? '' : '\n\n_gmx bot is not admin_'}`, m)
+        await this.reply(m.chat, `*Jyaadaa gaali de raha hai be! 💀*\n ${caption} ${isBotAdmin ? '' : '\n\n_gmx bot is not admin_'}`, m)
 
         if (isBotAdmin) {
             // Remove the participant from the group
