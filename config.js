@@ -60,7 +60,7 @@ global.fgpyp = ''
 global.fglog = '' 
 
 
-global.wait = '*⌛ _Hey bro wait a moment..._*\n*(^o^)*'
+global.wait = '*⌛ _Hey bro wait a moment..._*\n*💝*'
 global.rwait = '⌛'
 global.dmoji = '💯'
 global.done = '💷'
