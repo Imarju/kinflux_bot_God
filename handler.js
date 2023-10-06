@@ -297,6 +297,8 @@ export async function handler(chatUpdate) {
                     chat.viewonce = true
                 if (!('antiToxic' in chat))
                     chat.antiToxic = true
+		if (!('grouponly' in chat))
+		    chat.grouponly = true
                 if (!('simi' in chat))
                     chat.simi = true
                 if (!('autosticker' in chat))
@@ -324,8 +326,9 @@ export async function handler(chatUpdate) {
                     antiLink: true,
                     viewonce: true,
                     antiToxic: true,
-                    simi: true,
-                    expired: 0,
+                    simi: true, 
+		    grouponly: true, 
+		    expired: 0,
                     onlyenglish: false,
                     autosticker: false,
                     premium: false,
@@ -339,15 +342,17 @@ export async function handler(chatUpdate) {
                 if (!('autoread' in settings)) settings.autoread = true
                 if (!('restrict' in settings)) settings.restrict = false 
                 if (!('anticall' in settings)) settings.anticall = true
-                if (!('autorestart' in settings)) settings.autorestart = false
-                if (!('restartDB' in settings)) settings.restartDB = 0
+                if (!('autorestart' in settings)) settings.autorestart = true
+                if (!('restartDB' in settings)) settings.restartDB = false
+		if (!('grouponly' in settings)) settings.grouponly = true
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
                 autoread: true,
-                autorestart: false,
-                anticall: true,
-                restartDB: 0,
-                restrict: false
+                autorestart: true,
+                anticall: true,   
+	        restartDB: false,
+                restrict: false, 
+		grouponly:true,    
             }
         } catch (e) {
             console.error(e)
