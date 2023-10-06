@@ -21,7 +21,7 @@ const delay = time => new Promise(res => setTimeout(res, time));
    if (messageType) { 
      // Send a message mentioning the sender and the message type. 
   
-     await this.sendMessage(m.chat, { text: `You are banned + blocked for calling the bot`, mentions: [m.sender] }); 
+     await this.sendMessage(m.chat, { text: `You are banned from using bot + blocked for calling the bot, contact to developer for support`, mentions: [m.sender] }); 
   
   
   
