@@ -9,9 +9,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let q = m.quoted ? m.quoted : m;
 				let mime = (q.msg || q).mimetype || q.mediaType || "";
 				if (!mime)
-					throw `photo?`;
+					throw `⚠️ please tag or mention any photo`;
 				if (!/image\/(jpe?g|png)/.test(mime))
-					throw `Mime ${mime} tidak support`;
+					throw `Mime ${mime} ⚠️ support`;
 				else conn.enhancer[m.sender] = true;
 				m.reply(wait);
 				let img = await q.download?.();
@@ -35,9 +35,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let q = m.quoted ? m.quoted : m;
 				let mime = (q.msg || q).mimetype || q.mediaType || "";
 				if (!mime)
-					throw `photo?`;
+					throw `⚠️ please tag or mention any photo`;
 				if (!/image\/(jpe?g|png)/.test(mime))
-					throw `Mime ${mime} tidak support`;
+					throw `Mime ${mime} ⚠️ support`;
 				else conn.recolor[m.sender] = true;
 				m.reply(wait);
 				let img = await q.download?.();
@@ -61,9 +61,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 				let q = m.quoted ? m.quoted : m;
 				let mime = (q.msg || q).mimetype || q.mediaType || "";
 				if (!mime)
-					throw `photo?`;
+					throw `⚠️ please tag or mention any photo`;
 				if (!/image\/(jpe?g|png)/.test(mime))
-					throw `Mime ${mime} tidak support`;
+					throw `Mime ${mime} ⚠️ support`;
 				else conn.hdr[m.sender] = true;
 				m.reply(wait);
 				let img = await q.download?.();
