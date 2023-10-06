@@ -94,6 +94,7 @@ let str = `
 ┆to see all cmd
 💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help2. It's like my magic spell book!_* 💡
 
+𝐓𝐇𝐄-𝐎𝐅𝐅𝐈𝐂𝐈𝐀𝐋-𝐆𝐌𝐗-𝐌𝐃
 ≻───── ⋆✩⋆ ─────≺
 `
     conn.sendFile(m.chat, pp, 'perfil.jpg', str, m, false, { mentions: [who] })
