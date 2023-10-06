@@ -201,28 +201,30 @@ break
      if (!/[01]/.test(command)) return m.reply(`
 ≡ List of options
 
-◈──『 *GMX ADMIN*』───⳹
-⛊ welcome
-⛊ antilink
-⛊ nsfw
-⛊ autosticker
-⛊ detect
-⛊ antidelete
-⛊ jarvis
-⛊ antispam
-⛊ antitoxic
+◈──『 *FOR ADMIN*』───⳹
+👋 welcome
+🔗 antilink
+🥵 nsfw
+⚛️ autosticker
+🕵️ detect
+🫧 antidelete
+💀 jarvis
+🪄 antispam
+🔪 antitoxic
 ╰──────────⳹ 
-◈──『 *GMX USERS*』───⳹
+◈──『 *FOR USERS*』───⳹
 ⛊ autolevelup
 ⛊ chatbot 
 ╰──────────⳹
-◈──『 *GMX OWNER*』───⳹
-⛊ selfmode
-⛊ onlydm
-⛊ grouponly
-⛊ autotype
+◈──『 *FOR OWNER*』───⳹
+® selfmode ⚠️ 
+® onlydm
+® grouponly
+® autotype 
+® anticall
+® pmblocker 
 ╰──────────⳹
-*📌 Example :*
+*(-: Example :*
 *${usedPrefix}on* welcome
 *${usedPrefix}off* welcome
 `)
