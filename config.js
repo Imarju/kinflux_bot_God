@@ -49,7 +49,7 @@ global.APIKeys = { // APIKey Here
 // Sticker WM
 global.botname = 'MIZUHARA-CHIZURU'
 global.premium = 'true'
-global.packname = '＊*•̩̩͙✩•̩̩͙*˚𝕋𝚑ᵋ ٥ᶠᶠﺂc𝘪ᤂɩ ɠ𝑚x 𝙗٥τ*•̩̩͙✩•̩̩͙*˚＊' 
+global.packname = '𒈞ＴＨＥ-ＯＦＦＩＣＩＡＬ-ＧＭＸ-ＭＤ𒈞' 
 
 global.author = 'SUDIP BISWAS (Arju-sonwani)' 
 global.igfg = '❤️ Follow on Instagram ID gmx_grand_master_x' 
@@ -76,3 +76,4 @@ watchFile(file, () => {
   console.log(chalk.redBright("Update 'config.js'"))
   import(`${file}?update=${Date.now()}`)
 })
+
